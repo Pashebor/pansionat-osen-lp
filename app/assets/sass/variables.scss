@@ -1,0 +1,9 @@
+$main-color: #FF820F;
+$secondary-color: rgb(14, 152, 221);
+@mixin text-shadow{
+  text-shadow: 0 1px 1px black;
+}
+
+@mixin gray-section{
+  background-color: #DDDDDD;
+}

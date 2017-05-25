@@ -2,10 +2,15 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var root = path.resolve(__dirname, 'app');
 
 module.exports = {
+    context: path.join(__dirname, 'app'),
+    devServer: {
+      outputPath: path.join(__dirname, 'build')
+    },
     entry: {
         pansionat_osen_lp: path.resolve(root, 'pansionat.osen.lp.jsx'),
         style: path.resolve(root, 'assets/sass/style.scss'),
@@ -52,6 +57,9 @@ module.exports = {
         new HtmlWebpackPlugin({
            template: path.resolve(root, './index.html')
         }),
-        new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true })
+        new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true }),
+        new CopyWebpackPlugin([
+            { from: 'assets/images', to: './images/' }
+        ])
    ]
 };

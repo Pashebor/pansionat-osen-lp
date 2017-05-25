@@ -475,3 +475,275 @@ template {
 body {
   font-family: OpenSansLight;
   font-size: 16px; }
+
+@font-face {
+  font-family: FontAwesome;
+  src: url(fonts/fontawesome-webfont.eot);
+  src: url(fonts/fontawesome-webfont.eot?#iefix&v=3.0.1) format("embedded-opentype"), url(fonts/FontAwesome.otf) format("opentype"), url(fonts/fontawesome-webfont.woff) format("woff"), url(fonts/fontawesome-webfont.woff2) format("woff2"), url(fonts/fontawesome-webfont.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: OpenSansLight;
+  src: url(fonts/OpenSans-Light.ttf); }
+
+@font-face {
+  font-family: OpenSansRegular;
+  src: url(fonts/OpenSans-Regular.ttf); }
+
+@font-face {
+  font-family: OpenSansBold;
+  src: url(fonts/OpenSans-Bold.ttf); }
+
+@font-face {
+  font-family: RobotoSlabRegular;
+  src: url(fonts/RobotoSlab-Regular.ttf); }
+
+@font-face {
+  font-family: RobotoSlabBold;
+  src: url(fonts/RobotoSlab-Bold.ttf); }
+
+body {
+  font-family: OpenSansLight;
+  font-size: 16px; }
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  -ms-grid-column-align: stretch;
+      justify-items: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .header__logo {
+    margin: 20px 0 0 0; }
+    .header__logo img {
+      width: 55%;
+      display: block;
+      margin: auto; }
+  .header .navigation {
+    margin: 20px 0 0 0; }
+  .header-phones {
+    margin: 20px 0 0 0;
+    font-family: OpenSansBold;
+    font-size: 24px;
+    position: relative;
+    top: 5px; }
+    .header-phones__item {
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      color: #FF820F;
+      padding-bottom: 10px;
+      transition: color 0.3s ease-in-out; }
+      .header-phones__item:hover {
+        color: #0e98dd; }
+
+.navigation-list {
+  padding: 0;
+  vertical-align: middle;
+  list-style: none;
+  text-align: center;
+  display: block;
+  font-family: OpenSansRegular;
+  color: black;
+  font-size: 22px; }
+  .navigation-list__item {
+    display: inline;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; }
+    .navigation-list__item:hover {
+      background-color: #FF820F; }
+
+.quality {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  background-image: url(images/oldwoman.jpg); }
+  .quality__wrapper {
+    background-color: rgba(13, 13, 13, 0.64);
+    padding: 126px 0 123px 0;
+    color: white;
+    text-align: left; }
+  .quality__container {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: 90%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .quality__title {
+    font-family: OpenSansRegular;
+    font-size: 56px;
+    margin-bottom: 15px; }
+  .quality__subtitle {
+    font-family: OpenSansLight;
+    font-size: 28px;
+    margin: 25px 0 10px; }
+  .quality__text, .complex-care__subtitle, .causes__title {
+    font-family: OpenSansLight;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px; }
+    .quality__text span, .complex-care__subtitle span, .causes__title span {
+      font-family: OpenSansRegular;
+      color: #FF820F; }
+  .quality__subtitle {
+    text-shadow: 0 1px 1px black; }
+  .quality__text, .complex-care__subtitle, .causes__title {
+    text-shadow: 0 1px 1px black; }
+  .quality__title {
+    text-shadow: 0 1px 1px black; }
+  .quality__form {
+    margin: 20px 0 0 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 35% 45%;
+        grid-template-columns: 35% 45%;
+    grid-column-gap: 20px;
+    width: 80%; }
+
+.complex-care {
+  background-color: #DDDDDD;
+  padding: 25px 0; }
+  .complex-care__title {
+    font-family: OpenSansLight;
+    font-size: 36px;
+    color: black;
+    text-align: center; }
+  .complex-care__subtitle {
+    text-shadow: none;
+    text-align: center;
+    margin-bottom: 38px; }
+  .complex-care-cases {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr); }
+    .complex-care-cases__item {
+      width: 85%; }
+      .complex-care-cases__item p {
+        font-family: OpenSansBold;
+        font-size: 18px;
+        color: #333333;
+        text-align: center; }
+
+.causes {
+  padding: 25px 0; }
+  .causes__title {
+    text-shadow: none;
+    text-align: center;
+    font-size: 36px;
+    margin: 45px 0; }
+  .causes-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .causes-list__item img {
+      width: 84%;
+      display: block;
+      margin: auto; }
+    .causes-list__item p {
+      text-align: center;
+      font-family: OpenSansRegular;
+      font-size: 16px;
+      color: #333333;
+      line-height: 20px;
+      padding: 0 10px; }
+
+.main {
+  margin: 20px 0; }
+
+.container {
+  width: 1170px;
+  margin: auto; }
+
+.line {
+  height: 3px;
+  background-color: white;
+  border: none;
+  width: 96%;
+  margin-right: 4%; }
+
+.input-field {
+  font-family: OpenSansRegular;
+  padding: 7px 16px;
+  font-size: 18px;
+  border-radius: 5px;
+  color: black;
+  border: 2px solid grey; }
+
+.btn {
+  font-family: OpenSansRegular;
+  background-color: #0e98dd;
+  border-radius: 5px;
+  border: 2px solid #0b7ab0;
+  padding: 7px 16px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out; }
+  .btn:hover {
+    background-color: #0b7ab0; }
+
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .container {
+    width: 100%; } }
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .header {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr); }
+  .container {
+    width: 100%; }
+  .complex-care-cases {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr); }
+    .complex-care-cases__item {
+      width: 100%; }
+  .navigation-list__item {
+    display: block; }
+  .quality__wrapper {
+    padding: 30px 0; }
+  .quality__title {
+    font-size: 30px;
+    text-align: center; }
+  .quality__subtitle {
+    font-size: 24px;
+    margin: 10px 0 10px;
+    text-align: center; }
+  .quality__text, .complex-care__subtitle, .causes__title {
+    line-height: normal;
+    text-align: center; }
+  .quality__form {
+    width: 95%;
+    -ms-grid-columns: (100%)[1];
+        grid-template-columns: repeat(1, 100%);
+    grid-row-gap: 20px; }
+    .quality__form .btn {
+      white-space: normal; }
+  .causes-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: (1fr)[10];
+        grid-template-rows: repeat(10, 1fr);
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+
+@media screen and (min-width: 501px) and (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 0 10px; } }

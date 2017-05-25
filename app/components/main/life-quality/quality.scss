@@ -1,0 +1,52 @@
+.quality{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  background-image: url(../images/oldwoman.jpg);
+  &__wrapper{
+    background-color: rgba(13, 13, 13, 0.64);
+    padding: 126px 0 123px 0;
+    color: white;
+    text-align: left;
+  }
+  &__container{
+    display: grid;
+    grid-auto-columns: 90%;
+    justify-content: center;
+  }
+  &__title{
+    font-family: $headers-font-regular;
+    font-size: 56px;
+    margin-bottom: 15px;
+  }
+
+  &__subtitle{
+    font-family: $primary-font;
+    font-size: 28px;
+    margin: 25px 0 10px;
+  }
+
+  &__text{
+    font-family: $primary-font;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 10px;
+    span{
+      font-family: $headers-font-regular;
+      color: $main-color;
+    }
+  }
+  @each $text-block in (__subtitle, __text, __title) {
+    &#{$text-block} {
+      @include text-shadow;
+    }
+  }
+  &__form{
+    margin: 20px 0 0 0;
+    display: grid;
+    grid-template-columns: 35% 45%;
+    grid-column-gap: 20px;
+    width: 80%;
+  }
+}
