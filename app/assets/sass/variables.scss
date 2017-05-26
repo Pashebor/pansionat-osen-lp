@@ -5,5 +5,9 @@ $secondary-color: rgb(14, 152, 221);
 }
 
 @mixin gray-section{
-  background-color: #DDDDDD;
+  background-color: #F7F7F7;
+}
+
+@mixin secondary-font-color{
+  color: #7F7F7F;
 }

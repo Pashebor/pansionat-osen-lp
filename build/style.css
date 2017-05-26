@@ -518,13 +518,23 @@ body {
       -ms-flex-align: center;
           align-items: center; }
   .header__logo {
-    margin: 20px 0 0 0; }
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-family: OpenSansBold;
+    color: #FF820F;
+    font-size: 30px; }
+    .header__logo p {
+      padding: 0 10%;
+      margin: 0;
+      line-height: 25px; }
     .header__logo img {
       width: 55%;
       display: block;
       margin: auto; }
   .header .navigation {
-    margin: 20px 0 0 0; }
+    margin: 20px 0 0 0;
+    position: relative;
+    right: 1%; }
   .header-phones {
     margin: 20px 0 0 0;
     font-family: OpenSansBold;
@@ -584,17 +594,17 @@ body {
     font-family: OpenSansLight;
     font-size: 28px;
     margin: 25px 0 10px; }
-  .quality__text, .complex-care__subtitle, .causes__title {
+  .quality__text, .complex-care__subtitle, .pansionats__subtitle, .causes__title, .diseases__title {
     font-family: OpenSansLight;
     font-size: 18px;
     font-weight: 600;
     margin-top: 10px; }
-    .quality__text span, .complex-care__subtitle span, .causes__title span {
+    .quality__text span, .complex-care__subtitle span, .pansionats__subtitle span, .causes__title span, .diseases__title span {
       font-family: OpenSansRegular;
       color: #FF820F; }
   .quality__subtitle {
     text-shadow: 0 1px 1px black; }
-  .quality__text, .complex-care__subtitle, .causes__title {
+  .quality__text, .complex-care__subtitle, .pansionats__subtitle, .causes__title, .diseases__title {
     text-shadow: 0 1px 1px black; }
   .quality__title {
     text-shadow: 0 1px 1px black; }
@@ -607,15 +617,18 @@ body {
     grid-column-gap: 20px;
     width: 80%; }
 
-.complex-care {
-  background-color: #DDDDDD;
-  padding: 25px 0; }
-  .complex-care__title {
+.complex-care, .diseases {
+  background-color: #F7F7F7;
+  padding: 25px 0;
+  border-top: 2px solid #DDDDDD;
+  border-bottom: 2px solid #DDDDDD; }
+  .complex-care__title, .pansionats__title {
     font-family: OpenSansLight;
-    font-size: 36px;
+    font-size: 30px;
     color: black;
-    text-align: center; }
-  .complex-care__subtitle {
+    text-align: center;
+    text-transform: uppercase; }
+  .complex-care__subtitle, .pansionats__subtitle {
     text-shadow: none;
     text-align: center;
     margin-bottom: 38px; }
@@ -632,13 +645,14 @@ body {
         color: #333333;
         text-align: center; }
 
-.causes {
+.causes, .pansionats {
   padding: 25px 0; }
-  .causes__title {
+  .causes__title, .diseases__title {
     text-shadow: none;
     text-align: center;
-    font-size: 36px;
-    margin: 45px 0; }
+    font-size: 30px;
+    margin: 30px 0 45px;
+    text-transform: uppercase; }
   .causes-list {
     display: -ms-grid;
     display: grid;
@@ -660,6 +674,49 @@ body {
       color: #333333;
       line-height: 20px;
       padding: 0 10px; }
+
+.diseases-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (44%)[2];
+      grid-template-columns: repeat(2, 44%);
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-bottom: 40px; }
+  .diseases-list__item {
+    color: #7F7F7F;
+    text-align: left;
+    font-family: OpenSansRegular;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px; }
+    .diseases-list__item::before {
+      font-family: FontAwesome;
+      content: '\F14A';
+      font-size: 25px;
+      color: #0e98dd;
+      padding: 0 10px 0 0; }
+
+.pansionats-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .pansionats-list__item .title {
+    font-family: OpenSansBold;
+    font-size: 20px;
+    color: #7F7F7F;
+    text-align: center; }
+  .pansionats-list__item .image {
+    margin: 0; }
+    .pansionats-list__item .image img {
+      display: block;
+      margin: auto; }
 
 .main {
   margin: 20px 0; }
@@ -704,6 +761,10 @@ body {
   .header {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr); }
+    .header__logo {
+      padding: 0 20%; }
+    .header .navigation {
+      display: none; }
   .container {
     width: 100%; }
   .complex-care-cases {
@@ -711,6 +772,11 @@ body {
         grid-template-columns: repeat(1, 1fr); }
     .complex-care-cases__item {
       width: 100%; }
+  .complex-care__title, .pansionats__title {
+    font-size: 30px;
+    padding: 0 5%; }
+  .complex-care__subtitle, .pansionats__subtitle {
+    padding: 0 10px; }
   .navigation-list__item {
     display: block; }
   .quality__wrapper {
@@ -722,7 +788,7 @@ body {
     font-size: 24px;
     margin: 10px 0 10px;
     text-align: center; }
-  .quality__text, .complex-care__subtitle, .causes__title {
+  .quality__text, .complex-care__subtitle, .pansionats__subtitle, .causes__title, .diseases__title {
     line-height: normal;
     text-align: center; }
   .quality__form {
@@ -735,13 +801,16 @@ body {
   .causes-list {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: (1fr)[10];
-        grid-template-rows: repeat(10, 1fr);
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; } }
+            justify-content: center; }
+    .causes-list__item figure {
+      margin: 1rem; }
+  .causes__title, .diseases__title {
+    margin: 15px 0;
+    font-size: 30px; } }
 
 @media screen and (min-width: 501px) and (max-width: 900px) {
   .container {

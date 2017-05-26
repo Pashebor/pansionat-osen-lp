@@ -4,9 +4,12 @@ import React from 'react';
 const Header = () => {
     return(
         <header className="header container">
-                <figure className="header__logo">
+                {/*<figure className="header__logo">
                     <img src="images/logo.png" alt="Лого Золотая Осень Жизни" title="Золотая Осень Жизни"/>
-                </figure>
+                </figure>*/}
+               <div className="header__logo">
+                   <p>Золотая Осень Жизни</p>
+               </div>
                <nav className="navigation">
                  <ul className="navigation-list">
                      <li className="navigation-list__item">УСЛУГИ</li>

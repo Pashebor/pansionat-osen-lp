@@ -1,11 +1,14 @@
 .complex-care{
   @include gray-section;
   padding: 25px 0;
+  border-top: 2px solid #DDDDDD;
+  border-bottom: 2px solid #DDDDDD;
   &__title{
     font-family: $primary-font;
-    font-size: 36px;
+    font-size: 30px;
     color: black;
     text-align: center;
+    text-transform: uppercase;
   }
   &__subtitle{
     @extend .quality__text;

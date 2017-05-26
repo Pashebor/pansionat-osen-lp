@@ -7,6 +7,15 @@
   align-items: center;
   &__logo{
     margin: 20px 0 0 0;
+    text-align: center;
+    font-family: $headers-font-bold;
+    color: $main-color;
+    font-size: 30px;
+    p{
+      padding: 0 10%;
+      margin: 0;
+      line-height: 25px;
+    }
     img{
       width: 55%;
       display: block;
@@ -15,6 +24,8 @@
   }
   .navigation{
     margin: 20px 0 0 0;
+    position: relative;
+    right: 1%;
   }
   &-phones{
     margin: 20px 0 0 0;

@@ -4,8 +4,9 @@
     @extend .quality__text;
     text-shadow: none;
     text-align: center;
-    font-size: 36px;
-    margin: 45px 0;
+    font-size: 30px;
+    margin: 30px 0 45px;
+    text-transform: uppercase;
   }
   &-list{
     display: grid;

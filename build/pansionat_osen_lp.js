@@ -12242,9 +12242,13 @@ var Header = function Header() {
         "header",
         { className: "header container" },
         _react2.default.createElement(
-            "figure",
+            "div",
             { className: "header__logo" },
-            _react2.default.createElement("img", { src: "images/logo.png", alt: "\u041B\u043E\u0433\u043E \u0417\u043E\u043B\u043E\u0442\u0430\u044F \u041E\u0441\u0435\u043D\u044C \u0416\u0438\u0437\u043D\u0438", title: "\u0417\u043E\u043B\u043E\u0442\u0430\u044F \u041E\u0441\u0435\u043D\u044C \u0416\u0438\u0437\u043D\u0438" })
+            _react2.default.createElement(
+                "p",
+                null,
+                "\u0417\u043E\u043B\u043E\u0442\u0430\u044F \u041E\u0441\u0435\u043D\u044C \u0416\u0438\u0437\u043D\u0438"
+            )
         ),
         _react2.default.createElement(
             "nav",
@@ -12326,6 +12330,14 @@ var _Causes = __webpack_require__(116);
 
 var _Causes2 = _interopRequireDefault(_Causes);
 
+var _Diseases = __webpack_require__(274);
+
+var _Diseases2 = _interopRequireDefault(_Diseases);
+
+var _Pansionats = __webpack_require__(275);
+
+var _Pansionats2 = _interopRequireDefault(_Pansionats);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -12351,7 +12363,9 @@ var Main = function (_React$Component) {
                 { className: 'main' },
                 _react2.default.createElement(_LifeQuality2.default, null),
                 _react2.default.createElement(_ComplexCare2.default, null),
-                _react2.default.createElement(_Causes2.default, null)
+                _react2.default.createElement(_Causes2.default, null),
+                _react2.default.createElement(_Diseases2.default, null),
+                _react2.default.createElement(_Pansionats2.default, null)
             );
         }
     }]);
@@ -29263,6 +29277,263 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 274 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Diseases = function Diseases() {
+    return _react2.default.createElement(
+        "section",
+        { className: "diseases" },
+        _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+                "h2",
+                { className: "diseases__title" },
+                "\u041C\u042B \u0417\u0410\u0411\u041E\u0422\u0418\u041C\u0421\u042F \u041E \u041B\u042E\u0414\u042F\u0425 \u0421\u041E \u0421\u041B\u0415\u0414\u0423\u042E\u0429\u0418\u041C\u0418 \u0417\u0410\u0411\u041E\u041B\u0415\u0412\u0410\u041D\u0418\u042F\u041C\u0418:"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "diseases-list" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u041E\u043D\u043A\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0437\u0430\u0431\u043E\u043B\u0435\u0432\u0430\u043D\u0438\u044F"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0423\u0445\u043E\u0434 \u0437\u0430 \u043B\u0435\u0436\u0430\u0447\u0438\u043C\u0438 \u043F\u0430\u0446\u0438\u0435\u043D\u0442\u0430\u043C\u0438"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u041D\u0430\u0440\u0443\u0448\u0435\u043D\u0438\u044F \u043E\u043F\u043E\u0440\u043D\u043E-\u0434\u0432\u0438\u0433\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E \u0430\u043F\u043F\u0430\u0440\u0430\u0442\u0430"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0421\u043E\u0441\u0443\u0434\u0438\u0441\u0442\u0430\u044F \u0434\u0435\u043C\u0435\u043D\u0446\u0438\u044F"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0421\u043A\u043B\u0435\u0440\u043E\u0437"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0417\u0430\u0431\u043E\u043B\u0435\u0432\u0430\u043D\u0438\u0435 \u0441\u0443\u0441\u0442\u0430\u0432\u043E\u0432 \u0438 \u043E\u0441\u0442\u0435\u043E\u0445\u043E\u043D\u0434\u0440\u043E\u0437"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0417\u0430\u0431\u043E\u043B\u0435\u0432\u0430\u043D\u0438\u044F \u043D\u0435\u0440\u0432\u043D\u043E\u0439 \u0441\u0438\u0441\u0442\u0435\u043C\u044B"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0421\u0435\u0440\u0434\u0435\u0447\u043D\u043E-\u0441\u043E\u0441\u0443\u0434\u0438\u0441\u0442\u044B\u0435 \u0437\u0430\u0431\u043E\u043B\u0435\u0432\u0430\u043D\u0438\u044F"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0422\u0440\u0430\u0432\u043C\u044B \u0438 \u043F\u0435\u0440\u0435\u043B\u043E\u043C\u044B \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u043E\u0439 \u0441\u0442\u0435\u043F\u0435\u043D\u0438 \u0442\u044F\u0436\u0435\u0441\u0442\u0438"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0421\u043D\u0438\u0436\u0435\u043D\u0438\u0435 \u0443\u043C\u0441\u0442\u0432\u0435\u043D\u043D\u043E\u0439 \u0434\u0435\u044F\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u0438"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0411\u043E\u043B\u0435\u0437\u043D\u044C \u0410\u043B\u044C\u0446\u0433\u0435\u0439\u043C\u0435\u0440\u0430 \u0432 \u0440\u0430\u0437\u043B\u0438\u0447\u043D\u044B\u0445 \u0441\u0442\u0430\u0434\u0438\u044F\u0445"
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "diseases-list__item" },
+                    "\u0421\u0430\u0445\u0430\u0440\u043D\u044B\u0439 \u0434\u0438\u0430\u0431\u0435\u0442"
+                )
+            )
+        )
+    );
+};
+
+exports.default = Diseases;
+
+/***/ }),
+/* 275 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Pansionats = function Pansionats() {
+    return _react2.default.createElement(
+        "section",
+        { className: "pansionats" },
+        _react2.default.createElement(
+            "div",
+            { className: "container" },
+            _react2.default.createElement(
+                "h2",
+                { className: "pansionats__title" },
+                "\u041F\u0410\u041D\u0421\u0418\u041E\u041D\u0410\u0422\u042B"
+            ),
+            _react2.default.createElement(
+                "h6",
+                { className: "pansionats__subtitle" },
+                "\u041D\u0430\u0448 \u043F\u0440\u0438\u043E\u0440\u0438\u0442\u0435\u0442 \u2013 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u0434\u043E\u043C\u0430\u0448\u043D\u0435\u0433\u043E \u0443\u044E\u0442\u0430 \u0438 \u043A\u043E\u043C\u0444\u043E\u0440\u0442\u0430 \u0434\u043B\u044F \u0432\u0430\u0448\u0438\u0445 \u0431\u043B\u0438\u0437\u043A\u0438\u0445"
+            ),
+            _react2.default.createElement(
+                "div",
+                { className: "pansionats-list" },
+                _react2.default.createElement(
+                    "div",
+                    { className: "pansionats-list__item" },
+                    _react2.default.createElement(
+                        "h4",
+                        { className: "title" },
+                        "\u041F\u0430\u043D\u0441\u0438\u043E\u043D\u0430\u0442 \u0432 \u0418\u0441\u0442\u0440\u0435"
+                    ),
+                    _react2.default.createElement(
+                        "figure",
+                        { className: "image" },
+                        _react2.default.createElement("img", { src: "images/pansionat-istra.jpg", alt: "\u041F\u0430\u043D\u0441\u0438\u043E\u043D\u0430\u0442 \u0432 \u0418\u0441\u0442\u0440\u0435", title: "\u0418\u0441\u0442\u0440\u0430" }),
+                        _react2.default.createElement(
+                            "figcaption",
+                            { className: "image__caption" },
+                            "\u041C\u041E, \u0418\u0441\u0442\u0440\u0438\u043D\u0441\u043A\u0438\u0439 \u0440\u0430\u0439\u043E\u043D, \u043F\u043E\u0441\u0435\u043B\u043E\u043A \u0414\u0443\u0431\u0440\u0430\u0432\u0430, 12\u0431"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "desc-list" },
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u041F\u0440\u043E\u0441\u0442\u043E\u0440\u043D\u044B\u0435 \u0438 \u043A\u043E\u043C\u0444\u043E\u0440\u0442\u043D\u044B\u0435 \u043D\u043E\u043C\u0435\u0440\u0430"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u041A\u0430\u043C\u0438\u043D\u043D\u044B\u0439 \u0437\u0430\u043B \u0438 \u0433\u043E\u0441\u0442\u0438\u043D\u0430\u044F \u0434\u043B\u044F \u043F\u0440\u0438\u044F\u0442\u043D\u043E\u0433\u043E \u043E\u0431\u0449\u0435\u043D\u0438\u044F"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u042D\u043A\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438 \u0447\u0438\u0441\u0442\u044B\u0439 \u0440\u0430\u0439\u043E\u043D \u0432 \u043F\u043E\u043B\u0443\u0447\u0430\u0441\u0435 \u0435\u0437\u0434\u044B \u043E\u0442 \u041C\u043E\u0441\u043A\u0432\u044B \u043F\u043E \u041D\u043E\u0432\u043E\u0439 \u0420\u0438\u0433\u0435"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "pansionats-list__item" },
+                    _react2.default.createElement(
+                        "h4",
+                        { className: "title" },
+                        "\u041F\u0430\u043D\u0441\u0438\u043E\u043D\u0430\u0442 \u0432 \u0418\u0441\u0442\u0440\u0435"
+                    ),
+                    _react2.default.createElement(
+                        "figure",
+                        { className: "image" },
+                        _react2.default.createElement("img", { src: "images/pansionat-istra.jpg", alt: "\u041F\u0430\u043D\u0441\u0438\u043E\u043D\u0430\u0442 \u0432 \u0418\u0441\u0442\u0440\u0435", title: "\u0418\u0441\u0442\u0440\u0430" }),
+                        _react2.default.createElement(
+                            "figcaption",
+                            { className: "image__caption" },
+                            "\u041C\u041E, \u0418\u0441\u0442\u0440\u0438\u043D\u0441\u043A\u0438\u0439 \u0440\u0430\u0439\u043E\u043D, \u043F\u043E\u0441\u0435\u043B\u043E\u043A \u0414\u0443\u0431\u0440\u0430\u0432\u0430, 12\u0431"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "desc-list" },
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u041F\u0440\u043E\u0441\u0442\u043E\u0440\u043D\u044B\u0435 \u0438 \u043A\u043E\u043C\u0444\u043E\u0440\u0442\u043D\u044B\u0435 \u043D\u043E\u043C\u0435\u0440\u0430"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u041A\u0430\u043C\u0438\u043D\u043D\u044B\u0439 \u0437\u0430\u043B \u0438 \u0433\u043E\u0441\u0442\u0438\u043D\u0430\u044F \u0434\u043B\u044F \u043F\u0440\u0438\u044F\u0442\u043D\u043E\u0433\u043E \u043E\u0431\u0449\u0435\u043D\u0438\u044F"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u042D\u043A\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438 \u0447\u0438\u0441\u0442\u044B\u0439 \u0440\u0430\u0439\u043E\u043D \u0432 \u043F\u043E\u043B\u0443\u0447\u0430\u0441\u0435 \u0435\u0437\u0434\u044B \u043E\u0442 \u041C\u043E\u0441\u043A\u0432\u044B \u043F\u043E \u041D\u043E\u0432\u043E\u0439 \u0420\u0438\u0433\u0435"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "pansionats-list__item" },
+                    _react2.default.createElement(
+                        "h4",
+                        { className: "title" },
+                        "\u041F\u0430\u043D\u0441\u0438\u043E\u043D\u0430\u0442 \u0432 \u0418\u0441\u0442\u0440\u0435"
+                    ),
+                    _react2.default.createElement(
+                        "figure",
+                        { className: "image" },
+                        _react2.default.createElement("img", { src: "images/pansionat-istra.jpg", alt: "\u041F\u0430\u043D\u0441\u0438\u043E\u043D\u0430\u0442 \u0432 \u0418\u0441\u0442\u0440\u0435", title: "\u0418\u0441\u0442\u0440\u0430" }),
+                        _react2.default.createElement(
+                            "figcaption",
+                            { className: "image__caption" },
+                            "\u041C\u041E, \u0418\u0441\u0442\u0440\u0438\u043D\u0441\u043A\u0438\u0439 \u0440\u0430\u0439\u043E\u043D, \u043F\u043E\u0441\u0435\u043B\u043E\u043A \u0414\u0443\u0431\u0440\u0430\u0432\u0430, 12\u0431"
+                        )
+                    ),
+                    _react2.default.createElement(
+                        "ul",
+                        { className: "desc-list" },
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u041F\u0440\u043E\u0441\u0442\u043E\u0440\u043D\u044B\u0435 \u0438 \u043A\u043E\u043C\u0444\u043E\u0440\u0442\u043D\u044B\u0435 \u043D\u043E\u043C\u0435\u0440\u0430"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u041A\u0430\u043C\u0438\u043D\u043D\u044B\u0439 \u0437\u0430\u043B \u0438 \u0433\u043E\u0441\u0442\u0438\u043D\u0430\u044F \u0434\u043B\u044F \u043F\u0440\u0438\u044F\u0442\u043D\u043E\u0433\u043E \u043E\u0431\u0449\u0435\u043D\u0438\u044F"
+                        ),
+                        _react2.default.createElement(
+                            "li",
+                            { className: "desc-list__item" },
+                            "\u042D\u043A\u043E\u043B\u043E\u0433\u0438\u0447\u0435\u0441\u043A\u0438 \u0447\u0438\u0441\u0442\u044B\u0439 \u0440\u0430\u0439\u043E\u043D \u0432 \u043F\u043E\u043B\u0443\u0447\u0430\u0441\u0435 \u0435\u0437\u0434\u044B \u043E\u0442 \u041C\u043E\u0441\u043A\u0432\u044B \u043F\u043E \u041D\u043E\u0432\u043E\u0439 \u0420\u0438\u0433\u0435"
+                        )
+                    )
+                )
+            )
+        )
+    );
+};
+
+exports.default = Pansionats;
 
 /***/ })
 /******/ ]);
