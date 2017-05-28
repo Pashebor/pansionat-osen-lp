@@ -1,0 +1,30 @@
+.pansionats{
+  @extend .causes;
+  &__title{
+    @extend .complex-care__title;
+  }
+  &__subtitle{
+    @extend .complex-care__subtitle;
+  }
+  &-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5%;
+    justify-content: center;
+    &__item{
+      .title{
+        font-family: $headers-font-bold;
+        font-size: 20px;
+        @include secondary-font-color;
+        text-align: center;
+      }
+      .image{
+        margin: 0;
+        img{
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .header{
+    grid-template-columns: repeat(1, 1fr);
+    &__logo{
+      padding: 0 20%;
+    }
+    .navigation{
+      display: none;
+    }
+  }
+  .container{
+    width: 100%;
+  }
+
+  .complex-care{
+    &-cases{
+      grid-template-columns: repeat(1, 1fr);
+      &__item{
+        width: 100%;
+      }
+    }
+    &__title{
+      font-size: 30px;
+      padding: 0 5%;
+    }
+    &__subtitle{
+      padding: 0 10px;
+    }
+  }
+
+  .navigation{
+    &-list{
+      &__item{
+        display: block;
+      }
+    }
+  }
+
+  .quality{
+    &__wrapper{
+      padding: 30px 0;
+    }
+    &__title{
+      font-size: 30px;
+      text-align: center;
+    }
+    &__subtitle{
+      font-size: 24px;
+      margin: 10px 0 10px;
+      text-align: center;
+    }
+    &__text{
+      line-height: normal;
+      text-align: center;
+    }
+    &__form{
+      width: 95%;
+      grid-template-columns: repeat(1, 100%);
+      grid-row-gap: 20px;
+      .btn{
+        white-space: normal;
+      }
+    }
+  }
+
+  .causes{
+    &-list{
+      display: grid;
+      grid-template-columns: repeat(2, 50%);
+      justify-content: center;
+      &__item{
+        figure{
+          margin: 1rem;
+        }
+      }
+    }
+    &__title{
+      margin: 15px 0;
+      font-size: 30px;
+
+    }
+  }
+}

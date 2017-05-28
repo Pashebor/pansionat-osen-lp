@@ -1,0 +1,70 @@
+@import "../../assets/sass/fonts";
+
+.header{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  justify-items: stretch;
+  align-items: center;
+  &__logo{
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-family: $headers-font-bold;
+    color: $main-color;
+    font-size: 30px;
+    p{
+      padding: 0 10%;
+      margin: 0;
+      line-height: 25px;
+    }
+    img{
+      width: 55%;
+      display: block;
+      margin: auto;
+    }
+  }
+  .navigation{
+    margin: 20px 0 0 0;
+    position: relative;
+    right: 1%;
+  }
+  &-phones{
+    margin: 20px 0 0 0;
+    font-family: $headers-font-bold;
+    font-size: 24px;
+    position: relative;
+    top: 5px;
+    &__item{
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      color: $main-color;
+      padding-bottom: 10px;
+      transition: color 0.3s ease-in-out;
+      &:hover{
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.navigation{
+  &-list{
+    padding: 0;
+    vertical-align: middle;
+    list-style: none;
+    text-align: center;
+    display: block;
+    font-family: $headers-font-regular;
+    color: black;
+    font-size: 22px;
+    &__item{
+      display: inline;
+      padding: 20px 10px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        background-color: $main-color;
+      }
+    }
+  }
+}

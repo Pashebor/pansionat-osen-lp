@@ -1,0 +1,27 @@
+.diseases{
+  @extend .complex-care;
+  &__title{
+    @extend .causes__title;
+  }
+  &-list{
+    display: grid;
+    grid-template-columns: repeat(2, 44%);
+    justify-content: end;
+    margin-bottom: 40px;
+    &__item{
+      @include secondary-font-color;
+      text-align: left;
+      font-family: $headers-font-regular;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      &::before{
+        font-family: FontAwesome;
+        content: '\f14a';
+        font-size: 25px;
+        color: $secondary-color;
+        padding: 0 10px 0 0;
+      }
+    }
+  }
+}
