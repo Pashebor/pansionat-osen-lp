@@ -1,0 +1,71 @@
+.footer{
+  background-color: $footer-background;
+  &__blocks{
+    display: grid;
+    grid-template-columns: 50% 35%;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+
+.video-block{
+  padding: 25px 0;
+
+  &__title{
+    @extend .complex-care__title;
+    color: white;
+    text-align: left;
+    font-size: 27px;
+  }
+  &__subtitle{
+    @extend .complex-care__subtitle;
+    color: white;
+    text-align: left;
+    font-size: 21px;
+    padding-right: 12%;
+  }
+}
+
+.message-block{
+  background-color: rgba(0,0,0,0.5);
+  padding: 26px;
+  &__title{
+    font-family: $primary-font;
+    position: relative;
+    color: white;
+    font-size: 26px;
+    text-align: left;
+    font-weight: 100;
+    margin-top: 0;
+    &::after{
+      position: absolute;
+      left: 0;
+      bottom: -35px;
+      content: ' ';
+      width: 80px;
+      height: 6px;
+      background-color: $main-color;
+    }
+  }
+
+  &__subtitle{
+    @extend .complex-care__subtitle;
+    color: white;
+    text-align: left;
+    margin-top: 60px;
+    font-size: 20px;
+  }
+
+  &__form{
+    width: 95%;
+    .input-field{
+      width: inherit;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+    .btn{
+      width: 105%;
+      font-size: 24px;
+    }
+  }
+}

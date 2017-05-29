@@ -31,7 +31,8 @@ module.exports = {
              exclude: /(node_modules)/,
              loader: "babel-loader",
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['react', 'es2015', 'stage-0'],
+                    plugins: ["transform-decorators-legacy", "transform-class-properties"]
                 }
             },
             {
@@ -59,7 +60,8 @@ module.exports = {
         }),
         new ExtractTextPlugin({ filename: './[name].css', disable: false, allChunks: true }),
         new CopyWebpackPlugin([
-            { from: 'assets/images', to: './images/' }
+            { from: 'assets/images', to: './images/' },
+            { from: 'assets/common', to: './common'}
         ])
    ]
 };

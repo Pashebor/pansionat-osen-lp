@@ -20,7 +20,7 @@
       }
     }
     &__title{
-      font-size: 30px;
+      font-size: 25px;
       padding: 0 5%;
     }
     &__subtitle{
@@ -41,7 +41,7 @@
       padding: 30px 0;
     }
     &__title{
-      font-size: 30px;
+      font-size: 25px;
       text-align: center;
     }
     &__subtitle{
@@ -76,8 +76,74 @@
     }
     &__title{
       margin: 15px 0;
-      font-size: 30px;
+      font-size: 25px;
 
+    }
+  }
+
+  .diseases{
+    &-list{
+      grid-template-columns: repeat(1, 98%);
+    }
+  }
+
+  .pansionats{
+    &__subtitle{
+      margin-bottom: 10px;
+    }
+    &-list{
+      grid-template-columns: repeat(1, 90%);
+    }
+  }
+  .gallery{
+    &__grid{
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 10px;
+    }
+  }
+  .popup-overlay{
+    padding: 5px;
+    left: -5.5%;
+    width: 100%;
+    .popup-gallery{
+      width: 85%;
+      top: 35%;
+    }
+  }
+  .video-block{
+    iframe{
+      width: 95%;
+      display: block;
+      margin: auto;
+    }
+    &__title{
+      text-align: center;
+    }
+  }
+
+  .feedback{
+    &-list{
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 10px;
+      padding: 0 5px;
+    }
+  }
+  .footer{
+    &__blocks{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .message-block{
+    &__title{
+      text-align: center;
+      &::after{
+        left: calc(50% - 40px);
+      }
+    }
+    &__form{
+      .btn{
+        margin: 0 0 0 1%;
+      }
     }
   }
 }
