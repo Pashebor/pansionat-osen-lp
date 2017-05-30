@@ -1,8 +1,10 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 class Causes extends React.Component{
     render() {
         return(
+          <ScrollableAnchor id={'services'}>
             <section className="causes">
                 <div className="container">
                     <h2 className="causes__title" ><span>10</span> причин, почему <span>73%</span> наших клиентов приходят к нам по рекомендации</h2>
@@ -70,6 +72,7 @@ class Causes extends React.Component{
                     </div>
                 </div>
             </section>
+          </ScrollableAnchor>
         )
     }
 }

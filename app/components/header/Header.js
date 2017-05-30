@@ -4,19 +4,16 @@ import React from 'react';
 const Header = () => {
     return(
         <header className="header container">
-                {/*<figure className="header__logo">
-                    <img src="images/logo.png" alt="Лого Золотая Осень Жизни" title="Золотая Осень Жизни"/>
-                </figure>*/}
                <div className="header__logo">
                    <p>Золотая Осень Жизни</p>
                </div>
                <nav className="navigation">
                  <ul className="navigation-list">
-                     <li className="navigation-list__item">УСЛУГИ</li>
-                     <li className="navigation-list__item">ПАНСИОНАТЫ</li>
-                     <li className="navigation-list__item">ГАЛЕРЕЯ</li>
-                     <li className="navigation-list__item">ОТЗЫВЫ</li>
-                     <li className="navigation-list__item">КОНТАКТЫ</li>
+                     <li className="navigation-list__item"><a href="#services">УСЛУГИ</a></li>
+                     <li className="navigation-list__item"><a href="#pansionats">ПАНСИОНАТЫ</a></li>
+                     <li className="navigation-list__item"><a href='#gallery'>ГАЛЕРЕЯ</a></li>
+                     <li className="navigation-list__item"><a href='#feedbacks'>ОТЗЫВЫ</a></li>
+                     <li className="navigation-list__item"><a href='#contacts'>КОНТАКТЫ</a></li>
                  </ul>
               </nav>
               <div className="header-phones">

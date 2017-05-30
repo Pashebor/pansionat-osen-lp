@@ -1,5 +1,6 @@
 import React from 'react';
 import GallerySlider from './GallerySlider';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import {observer} from 'mobx-react';
 
 
@@ -43,6 +44,7 @@ class Gallery extends React.Component{
             )
         });
         return(
+          <ScrollableAnchor id={'gallery'} >
             <section className="gallery">
                 <div className="container">
                     <h2 className="gallery__title">ГАЛЕРЕЯ</h2>
@@ -53,6 +55,7 @@ class Gallery extends React.Component{
                 </div>
                 <GallerySlider store={this.props.store}/>
             </section>
+          </ScrollableAnchor>
         )
     }
 }

@@ -4,10 +4,16 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var JavaScriptObfuscator = require('webpack-obfuscator');
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 var root = path.resolve(__dirname, 'app');
 
 module.exports = {
+    context: path.join(__dirname, 'app'),
+    devServer: {
+        outputPath: path.join(__dirname, 'build')
+    },
     entry: {
         pansionat_osen_lp: path.resolve(root, 'pansionat.osen.lp.jsx'),
         style: path.resolve(root, 'assets/sass/style.scss'),
@@ -19,7 +25,7 @@ module.exports = {
         filename: '[name].js'
     },
 
-    watch: true,
+    watch: false,
 
     module: {
         loaders: [
@@ -59,6 +65,10 @@ module.exports = {
         new OptimizeCssAssetsPlugin(),
         new JavaScriptObfuscator ({
             rotateUnicodeArray: true
-        }, ['[name].js'])
+        }, ['[name].js']),
+        new CopyWebpackPlugin([
+            { from: 'assets/images', to: './images/' },
+            { from: 'assets/common', to: './common'}
+        ])
    ]
 };

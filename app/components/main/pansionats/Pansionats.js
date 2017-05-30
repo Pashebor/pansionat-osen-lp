@@ -1,8 +1,10 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 
 const Pansionats = () => {
     return(
+       <ScrollableAnchor id={'pansionats'}>
         <section className="pansionats">
             <div className="container">
                 <h2 className="pansionats__title">ПАНСИОНАТЫ</h2>
@@ -46,6 +48,7 @@ const Pansionats = () => {
                     </div>
                 </div>
         </section>
+       </ScrollableAnchor>
     );
 };
 

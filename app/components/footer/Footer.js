@@ -1,10 +1,12 @@
 import React from 'react';
 import InputMask from 'react-input-mask';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import {observer} from 'mobx-react';
 
 
 @observer
 class Footer extends React.Component{
+
     btnSubmitHandler(e) {
         e.preventDefault();
         let formData = {'form-name': 'order'};
@@ -14,7 +16,9 @@ class Footer extends React.Component{
         this.props.store.leaveAnOrderAction(formData);
     }
     render() {
+
         return(
+            <ScrollableAnchor id={'contacts'} >
             <footer className="footer">
                 <div className="container">
                     <div className="footer__blocks">
@@ -36,6 +40,7 @@ class Footer extends React.Component{
                     </div>
                 </div>
             </footer>
+            </ScrollableAnchor>
         )
     }
 }

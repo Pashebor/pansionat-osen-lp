@@ -1,5 +1,6 @@
 import React from 'react';
 import FeedbackSlider from './FeedbackSlider';
+import ScrollableAnchor from 'react-scrollable-anchor';
 import {observer} from 'mobx-react';
 
 @observer
@@ -40,6 +41,7 @@ class Feedbacks extends React.Component{
             )
         });
         return(
+            <ScrollableAnchor id={'feedbacks'} >
             <section className="feedback">
                 <div className="container">
                     <h2 className="feedback__title">ОТЗЫВЫ</h2>
@@ -50,6 +52,7 @@ class Feedbacks extends React.Component{
                     <FeedbackSlider store={this.props.store.feedback}/>
                 </div>
             </section>
+            </ScrollableAnchor>
         )
     }
 }
