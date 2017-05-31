@@ -33,7 +33,7 @@
   border-radius: 5px;
   border: 2px solid rgb(11, 122, 176);
   padding: 7px 16px;
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(255, 255, 255);
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
@@ -264,6 +264,14 @@
     }
   }
 
+}
+
+.slick-next, .slick-prev{
+  width: 100px;
+  height: 100px;
+}
+.slick-next{
+  right: -105px;
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1199px){

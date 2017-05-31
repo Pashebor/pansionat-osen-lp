@@ -11,9 +11,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    grid-column-gap: 10px;
+    grid-column-gap: 5px;
+    @for $item from 1 through 4 {
+      &__item:nth-child(#{$item}) {
+        grid-column: #{$item};
+      }
+    }
     &__item{
-      width: 100%;
+      width: 99%;
       cursor: zoom-in;
       img{
         width: inherit;

@@ -12,6 +12,13 @@
     grid-column-gap: 5%;
     justify-content: center;
     @include secondary-font-color;
+
+    @for $item from 1 through 3 {
+       &__item:nth-child(#{$item}) {
+         grid-column: #{$item};
+       }
+    }
+
     &__item{
       .title{
         font-family: $headers-font-bold;

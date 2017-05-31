@@ -2,7 +2,13 @@
   .header{
     grid-template-columns: repeat(1, 1fr);
     &__logo{
+      grid-column: 1;
+      grid-row: 1;
       padding: 0 20%;
+    }
+    &-phones{
+      grid-column: 1;
+      grid-row: 2;
     }
     .navigation{
       display: none;
@@ -11,10 +17,19 @@
   .container{
     width: 100%;
   }
-
+  $i: 1;
+  $j: 1;
   .complex-care{
     &-cases{
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 80%);
+      grid-template-rows: repeat(4, 1fr);
+      justify-content: center;
+      @for $item from 1 through 4 {
+          &__item:nth-child(#{$item}) {
+            grid-row: #{$item};
+            grid-column: 1;
+          }
+      }
       &__item{
         width: 100%;
       }
@@ -59,6 +74,10 @@
       grid-row-gap: 20px;
       .btn{
         white-space: normal;
+        grid-column: 1;
+      }
+      .input-field{
+        grid-column: 1;
       }
     }
   }
@@ -67,7 +86,24 @@
     &-list{
       display: grid;
       grid-template-columns: repeat(2, 50%);
+      grid-template-rows: repeat(5, 1fr);
       justify-content: center;
+      $i: 1;
+      $j: 1;
+      @for $item from 1 through 10 {
+        &__item:nth-child(#{$item}) {
+          grid-column: 1;
+          grid-row: $i;
+        }
+        $i: $i + 1;
+      }
+      @for $item from 6 through 10{
+        &__item:nth-child(#{$item}) {
+          grid-column: 2;
+          grid-row: $j;
+        }
+        $j: $j + 1;
+      }
       &__item{
         figure{
           margin: 1rem;
@@ -83,7 +119,15 @@
 
   .diseases{
     &-list{
-      grid-template-columns: repeat(1, 98%);
+      grid-template-columns: repeat(1, 100%);
+      grid-template-rows: repeat(12, 10%);
+      font-size: 18px;
+      @for $item from 1 through 12 {
+        &__item:nth-child(#{$item}) {
+          grid-column: 1;
+          grid-row: #{$item};
+        }
+      }
     }
   }
 
@@ -93,17 +137,41 @@
     }
     &-list{
       grid-template-columns: repeat(1, 90%);
+      grid-template-rows: repeat(3, 1fr);
+      @for $item from 1 through 3 {
+        &__item:nth-child(#{$item}) {
+          grid-row: #{$item};
+          grid-column: 1;
+        }
+      }
     }
   }
   .gallery{
     &__grid{
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(5, 1fr);
       padding: 0 10px;
+      $i: 1;
+      $j: 1;
+      @for $item from 1 through 10 {
+        &__item:nth-child(#{$item}) {
+          grid-column: 1;
+          grid-row: $i;
+        }
+        $i: $i + 1;
+      }
+      @for $item from 11 through 20{
+        &__item:nth-child(#{$item}) {
+          grid-column: 2;
+          grid-row: $j;
+        }
+        $j: $j + 1;
+      }
     }
   }
   .popup-overlay{
     padding: 5px;
-    left: -5.5%;
+    left: -1%;
     width: 100%;
     .popup-gallery{
       width: 85%;
@@ -124,8 +192,23 @@
   .feedback{
     &-list{
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 10px;
       padding: 0 5px;
+      $i: 1;
+      @for $item from 1 through 2 {
+        &__item:nth-child(#{$item}) {
+          grid-row: 1;
+          grid-column: #{$item};
+        }
+      }
+      @for $item from 3 through 4 {
+        &__item:nth-child(#{$item}) {
+          grid-row: 2;
+          grid-column: $i;
+        }
+        $i: $i + 1;
+      }
     }
   }
   .footer{
@@ -145,5 +228,20 @@
         margin: 0 0 0 1%;
       }
     }
+  }
+
+  .footer{
+    &__blocks{
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+  .video-block{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .message-block{
+    grid-column: 1;
+    grid-row: 2;
   }
 }

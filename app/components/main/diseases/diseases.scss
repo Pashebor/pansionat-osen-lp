@@ -6,8 +6,25 @@
   &-list{
     display: grid;
     grid-template-columns: repeat(2, 44%);
+    grid-template-rows: repeat(6, 1fr);
     justify-content: end;
     margin-bottom: 40px;
+    $i: 1;
+    $j: 1;
+    @for $item from 1 through 6 {
+      &__item:nth-child(#{$item}) {
+        grid-column: 1;
+        grid-row: $i;
+      }
+      $i: $i + 1;
+    }
+    @for $item from 7 through 12{
+      &__item:nth-child(#{$item}) {
+        grid-column: 2;
+        grid-row: $j;
+      }
+      $j: $j + 1;
+    }
     &__item{
       @include secondary-font-color;
       text-align: left;

@@ -1,8 +1,10 @@
 import React from 'react';
+import ScrollableAnchor from 'react-scrollable-anchor';
 
 class ComplexCare extends React.Component{
     render(){
         return(
+         <ScrollableAnchor id={'services'}>
             <section className="complex-care">
                 <div className="container">
                     <h2 className="complex-care__title">Комплексная забота о Ваших близких</h2>
@@ -35,6 +37,7 @@ class ComplexCare extends React.Component{
                     </div>
                 </div>
             </section>
+         </ScrollableAnchor>
         )
     }
 }

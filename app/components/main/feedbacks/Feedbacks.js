@@ -21,13 +21,14 @@ class Feedbacks extends React.Component{
             }
         }
 
-        imgArray.find((source) => {
-            if (source === e.target.src) {
+        for (let source = 0; source < imgArray.length; source++) {
+            if (imgArray[source] === e.target.src) {
                 let index = imgArray.indexOf(source);
                 imgArray.splice(index, 1);
                 imgArray.unshift(e.target.src);
+                break;
             }
-        });
+        }
         this.props.store.feedback.arrayOnClick = imgArray;
     }
     render() {

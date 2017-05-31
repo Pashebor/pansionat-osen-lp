@@ -19,6 +19,11 @@
   &-cases{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @for $item from 1 through 4 {
+       &__item:nth-child(#{$item}) {
+         grid-column: #{$item};
+       }
+    }
     &__item{
       width: 85%;
       p{

@@ -10,9 +10,25 @@
   }
   &-list{
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     justify-content: center;
+    $i: 1;
+    $j: 1;
+    @for $item from 1 through 10 {
+        &__item:nth-child(#{$item}) {
+        grid-row: 1;
+        grid-column: $i;
+        }
+      $i: $i + 1;
+    }
+    @for $item from 6 through 10{
+      &__item:nth-child(#{$item}) {
+        grid-row: 2;
+        grid-column: $j;
+      }
+      $j: $j + 1;
+    }
     &__item{
       img{
         width: 84%;

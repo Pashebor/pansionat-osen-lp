@@ -13,8 +13,8 @@ require ('./phpmailer/PHPMailerAutoload.php');
 
  $mail->From = 'pashebor@mail.ru';
  $mail->FromName = 'Золотая Осень Жизни';
- $mail->addAddress('pashebor@gmail.com', 'Золотая Осень Жизни');
  $mail->addAddress('pm@salesgenerator.pro', 'Золотая Осень Жизни');
+ $mail->addAddress('sasha131984@bk.ru', 'Золотая Осень Жизни');
  $mail->isHtml(true);
 
 
