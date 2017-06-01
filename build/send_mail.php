@@ -28,13 +28,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
        $mail->Subject = 'Воспользоваться предложением';
        $mail->Body = '<div><p>Номер телефона: '.$arrRequest['phone'].'</p></div>';
        $mail->send();
-       echo json_encode(["response" => true]);
+       echo json_encode(["response" => 'Ваша заявка принята, с Вами свяжется наш менеджер']);
              break;
       case 'order':
        $mail->Subject = 'Форма заявки';
        $mail->Body = '<div><p>Имя клиента: '.$arrRequest['name'].'</p></div><div><p>Номер телефона: '.$arrRequest['phone'].'</p></div>';
        $mail->send();
-       echo json_encode(["response" => true]);
+       echo json_encode(["response" => 'Ваша заявка принята, с Вами свяжется наш менеджер']);
              break;
      }
     } else {

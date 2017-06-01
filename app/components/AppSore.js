@@ -19,6 +19,10 @@ class AppSore {
         orderForm: null
     };
 
+    @observable isVisible = {
+        opacity: '0'
+    };
+
 /*ACTIONS*/
     @action useAnOfferAction = (formData) => {
         return requestCallback('./send_mail.php', formData)
@@ -41,9 +45,11 @@ class AppSore {
 }
 
 var store = new AppSore;
+/*
 autorun(() => {
     console.log(store.forms.offerForm);
     console.log(store.forms.orderForm);
 });
+*/
 
 export default store;

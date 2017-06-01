@@ -1,6 +1,7 @@
 import React from 'react';
 import InputMask from 'react-input-mask';
 import ScrollableAnchor from 'react-scrollable-anchor';
+import ButtonToTop from './ButtonToTop';
 import {observer} from 'mobx-react';
 
 
@@ -20,6 +21,7 @@ class Footer extends React.Component{
         return(
             <ScrollableAnchor id={'contacts'} >
             <footer className="footer">
+                <ButtonToTop visible={this.props.store.isVisible}/>
                 <div className="container">
                     <div className="footer__blocks">
                         <div className="video-block">
@@ -30,7 +32,6 @@ class Footer extends React.Component{
                         <div className="message-block">
                             <h2 className="message-block__title">Пансионат по уходу за пожилыми людьми</h2>
                             <h6 className="message-block__subtitle">Оставить заявку на неделю <span>бесплатного</span> проживания</h6>
-                            {this.props.store.forms.orderForm ? <div className="message-ok message-ok--footer"><p>Ваша заявка принята, с Вами свяжется наш менеджер</p></div> : null}
                             <form  className="message-block__form" encType="multipart/form-data" onSubmit={this.btnSubmitHandler.bind(this)}>
                                 <input type="text" className="input-field" placeholder="Ваше имя" required="true" name="name" ref="name"/>
                                 <InputMask mask="+7 (999) 999-99-99 " type="text" ref="phone" name="phone" className="input-field" placeholder="Ваш телефон" maskChar="_" required/>
