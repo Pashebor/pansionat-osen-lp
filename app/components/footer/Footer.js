@@ -8,13 +8,17 @@ import {observer} from 'mobx-react';
 @observer
 class Footer extends React.Component{
 
-    btnSubmitHandler(e) {
+    btnSubmitHandler = (e) => {
         e.preventDefault();
         let formData = {'form-name': 'order'};
         for (let field in this.refs) {
             formData[field] = this.refs[field].value;
         }
         this.props.store.leaveAnOrderAction(formData);
+    }
+
+    yaCounterHandler = () => {
+        yaCounter44458876.reachGoal('ADD_TARGET2'); return true;
     }
     render() {
 
@@ -32,10 +36,10 @@ class Footer extends React.Component{
                         <div className="message-block">
                             <h2 className="message-block__title">Пансионат по уходу за пожилыми людьми</h2>
                             <h6 className="message-block__subtitle">Оставить заявку на неделю <span>бесплатного</span> проживания</h6>
-                            <form  className="message-block__form" encType="multipart/form-data" onSubmit={this.btnSubmitHandler.bind(this)}>
+                            <form  className="message-block__form" encType="multipart/form-data" onSubmit={this.btnSubmitHandler}>
                                 <input type="text" className="input-field" placeholder="Ваше имя" required="true" name="name" ref="name"/>
                                 <InputMask mask="+7 (999) 999-99-99 " type="text" ref="phone" name="phone" className="input-field" placeholder="Ваш телефон" maskChar="_" required/>
-                                <input type="submit" value="ОСТАВИТЬ ЗАЯВКУ" className="btn"/>
+                                <input type="submit" value="ОСТАВИТЬ ЗАЯВКУ" className="btn" onClick={this.yaCounterHandler}/>
                             </form>
                         </div>
                     </div>
